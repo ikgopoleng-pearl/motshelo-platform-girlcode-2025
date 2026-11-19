@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Join a Group | BothoTech</title>
+<link rel="stylesheet" href="css/join-group.css" />
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo"><i data-lucide="gem"></i> BothoTech</div>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="groups.html" class="active">Groups</a>
+      <a href="notifications.html">Notifications</a>
+      <a href="profile.html">Profile</a>
+    </nav>
+  </header>
+
+  <main class="join-container">
+    <h1>Join a Motshelo Group</h1>
+    <p class="subtitle">Select a method to join a group.</p>
+
+    <div class="cards-container">
+  <div class="join-card" id="publicGroupBtn">
+    <i data-lucide="users"></i>
+    <h2>Join Public Group</h2>
+    <p>Browse all active public groups and join freely.</p>
+  </div>
+
+  <div class="join-card" id="privateGroupBtn">
+    <i data-lucide="lock"></i>
+    <h2>Join Private Group</h2>
+    <p>Enter a private group code shared by the admin to join.</p>
+  </div>
+</div>
+
+<div id="overlay"></div>
+
+<!-- Public Groups Modal -->
+<div id="publicGroupsModal" class="modal">
+  <h2>Active Public Groups</h2>
+  <ul class="group-list">
+    <li>Bophelo Motshelo</li>
+    <li>Tlotlo Savings</li>
+    <li>Ubuntu Circle</li>
+    <li>Kopano Trust</li>
+  </ul>
+  <button class="close-btn">Close</button>
+</div>
+
+<!-- Private Group Modal -->
+<div id="privateGroupModal" class="modal">
+  <h2>Join Private Group</h2>
+  <input type="text" placeholder="Enter Group Code" style="width:100%; padding:0.5rem; margin-top:1rem; border-radius:0.5rem; border:none;">
+  <button class="close-btn" style="margin-top:1rem;">Close</button>
+</div>
+
+  </main>
+
+  <script src="js/join-groups.js"></script>
+  <script>document.addEventListener("DOMContentLoaded",()=>lucide.createIcons());</script>
+</body>
+</html>

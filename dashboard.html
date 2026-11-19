@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BothoTech - My Motshelo Dashboard</title>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo"><i data-lucide="gem"></i> BothoTech</div>
+    <nav class="nav-links">
+        <a href="dashboard.html" class="nav-link">My Dashboard</a>
+        <a href="group.html" class="nav-link">Groups</a>
+        <a href="reports.html" class="nav-link">Reports</a>
+        <a href="ai-score.html" class="nav-link">AI Score</a>
+    </nav>
+    <div class="profile-badge">L</div>
+</header>
+
+<main>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div>
+            <h1>Welcome back, Lindiwe!</h1>
+            <p>You are part of <strong>3 active Motshelo groups</strong>.</p>
+        </div>
+        <div class="trust-score">
+            <h2>92 / 100</h2>
+            <span>Your AI Trust Score</span>
+        </div>
+    </section>
+
+    <!-- Groups Section -->
+    <section class="groups-section">
+        <h2>Your Motshelo Groups</h2>
+        <div class="groups-grid">
+            <div class="group-card gold">
+                <h3>Bophelo Group</h3>
+                <p>Total Savings: R 45,500</p>
+                <p>Next Payout: Oct 25, 2025</p>
+                <button class="view-btn">View Group</button>
+            </div>
+            <div class="group-card violet">
+                <h3>Ditsala Motshelo</h3>
+                <p>Total Savings: R 30,000</p>
+                <p>Next Payout: Nov 10, 2025</p>
+                <button class="view-btn">View Group</button>
+            </div>
+            <div class="group-card coral">
+                <h3>Motho Ke Motho</h3>
+                <p>Total Savings: R 22,700</p>
+                <p>Next Payout: Nov 30, 2025</p>
+                <button class="view-btn">View Group</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alerts + Notifications -->
+    <section class="bottom-grid">
+        <div class="card alerts">
+            <h3>Fraud & Irregularity Alerts</h3>
+            <ul class="list">
+                <li><span>Irregular payment in Bophelo Group</span><span style="color:var(--electric-coral);">Oct 8</span></li>
+                <li><span>Missed contribution: Katlego M.</span><span style="color:var(--electric-coral);">Sep 30</span></li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Notifications</h3>
+            <ul class="list">
+                <li><span>Next meeting: Oct 15</span><span>2 days left</span></li>
+                <li><span>New member request pending</span><span>Today</span></li>
+                <li><span>Reminder: Update contact info</span><span>1 day ago</span></li>
+            </ul>
+        </div>
+    </section>
+
+</main>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    if (typeof lucide !== 'undefined') { lucide.createIcons(); }
+});
+</script>
+
+</body>
+</html>

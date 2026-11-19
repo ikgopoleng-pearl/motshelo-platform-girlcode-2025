@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BothoTech - Group Dashboard</title>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link rel="stylesheet" href="css/view-groups.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo"><i data-lucide="gem" class="icon"></i> BothoTech</div>
+    <nav class="nav-links">
+      <a href="#" class="nav-link">Dashboard</a>
+      <a href="#" class="nav-link">Groups</a>
+      <a href="#" class="nav-link">Notifications</a>
+      <a href="#" class="nav-link">AI Score</a>
+    </nav>
+    <div class="profile-badge">L</div>
+  </header>
+
+  <main class="container" style="padding:1.5rem;">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div>
+        <h1>Welcome to Bophelo Group!</h1>
+        <p>Total Collected: R 45,500 | Next Payout: Oct 25, 2025</p>
+      </div>
+      <button class="hero-button"><i data-lucide="plus-circle"></i> Record Contribution</button>
+    </section>
+
+    <!-- Key Metrics -->
+    <section class="metrics-grid">
+      <div class="metric-card card-primary">
+        <div class="metric-header"><p class="metric-title">Total Money Collected</p><i data-lucide="wallet"></i></div>
+        <p class="metric-value">R 45,500</p>
+      </div>
+      <div class="metric-card card-med">
+        <div class="metric-header"><p class="metric-title">Your AI Trust Score</p><i data-lucide="user-check"></i></div>
+        <p class="metric-value">89 / 100</p>
+        <p class="metric-footer" style="color: var(--verdant-green);">High Trust Rating</p>
+      </div>
+      <div class="metric-card card-violet">
+        <div class="metric-header"><p class="metric-title">Fraud Alerts</p><i data-lucide="alert-triangle"></i></div>
+        <p class="metric-value" style="color: var(--crimson-red);">1</p>
+        <p class="metric-footer">Review Missed Payment</p>
+      </div>
+      <div class="metric-card card-coral">
+        <div class="metric-header"><p class="metric-title">Notifications</p><i data-lucide="bell"></i></div>
+        <p class="metric-value">3</p>
+        <p class="metric-footer">New announcements</p>
+      </div>
+    </section>
+
+    <!-- Main Grid -->
+    <section class="main-grid">
+      <div class="col-span-2">
+        <div class="card">
+          <h2>Trust Scores Chart</h2>
+          <div class="chart-placeholder">Chart Placeholder</div>
+        </div>
+
+        <div class="card contrib-card">
+          <h2>Group Contribution History</h2>
+          <ul class="activity-list">
+            <li class="activity-item">Member Refilwe: R 500 | 5 min ago</li>
+            <li class="activity-item">Member Thato: R 1,200 | 1 hr ago</li>
+            <li class="activity-item">Member Jane: R 800 | Oct 8</li>
+          </ul>
+          <button class="personal-contributions-btn">View All Contributions</button>
+        </div>
+
+        <div class="card contrib-card">
+          <h2>Your Contributions</h2>
+          <ul class="activity-list">
+            <li class="activity-item">R 500 | Oct 1</li>
+            <li class="activity-item">R 500 | Oct 8</li>
+            <li class="activity-item">R 500 | Oct 15</li>
+          </ul>
+          <button class="personal-contributions-btn">View My Contributions</button>
+        </div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:1.5rem;">
+        <div class="card">
+          <h2>Member Trust Ranks</h2>
+          <ul class="trust-list">
+            <li class="trust-item"><div>Jane Doe</div><span>98</span></li>
+            <li class="trust-item"><div>Katlego M.</div><span>82</span></li>
+            <li class="trust-item"><div>Lerato S.</div><span>65</span></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>Quick Actions</h2>
+          <div class="quick-actions">
+            <button class="quick-action-btn">Make Contribution</button>
+            <button class="quick-action-btn">Request Payout Info</button>
+            <button class="quick-action-btn">Report Issue</button>
+            <button class="quick-action-btn">Message Group</button>
+            <button class="notifications-btn">View Notifications</button>
+            </div>
+        </div>
+      </div>
+    </section>
+  </main>
+<!-- Overlay -->
+<div id="overlay"></div>
+
+<!-- Quick Actions Modal -->
+<div id="quick-actions-modal" class="modal">
+    <h2>Quick Actions</h2>
+    <p>Here you can quickly perform actions like recording contributions or sending reminders.</p>
+    <button class="close-btn">Close</button>
+</div>
+
+<!-- Personal Contributions Modal -->
+<div id="personal-contributions-modal" class="modal">
+    <h2>Personal Contribution History</h2>
+    <p>View all your contributions in detail, with amounts and dates.</p>
+    <button class="close-btn">Close</button>
+</div>
+
+<!-- Notifications Modal -->
+<div id="notifications-modal" class="modal">
+    <h2>Notifications & Announcements</h2>
+    <p>All recent notifications for your groups and platform announcements are listed here.</p>
+    <button class="close-btn">Close</button>
+</div>
+
+<script src="js/view-groups.js"></script>
+<script>document.addEventListener('DOMContentLoaded',()=>{if(typeof lucide!=='undefined'){lucide.createIcons();}});</script>
+</body>
+</html>

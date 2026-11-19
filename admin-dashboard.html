@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BothoTech Admin Dashboard - Reports</title>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link rel="stylesheet" href="css/admin-dashboard.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">BothoTech Admin</div>
+    <nav class="nav-links">
+        <a href="#">Dashboard</a>
+        <a href="#">Reports</a>
+        <a href="#">Users</a>
+        <a href="#">Groups</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <h1 style="color:white; margin-bottom:1.5rem;">Available Reports</h1>
+
+    <section class="grid grid-3">
+
+        <div class="card">
+            <i data-lucide="users" class="icon"></i>
+            <div>
+                <h2>User Reports</h2>
+                <p>View active users, suspended accounts, and trust scores.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <i data-lucide="layers" class="icon"></i>
+            <div>
+                <h2>Group Reports</h2>
+                <p>See all active Motshelo groups, contributions, and trust analytics.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <i data-lucide="alert-triangle" class="icon"></i>
+            <div>
+                <h2>Fraud Alerts</h2>
+                <p>Track suspicious activity and potential fraudulent contributions.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <i data-lucide="trending-up" class="icon"></i>
+            <div>
+                <h2>Contribution Trends</h2>
+                <p>Monitor contribution patterns across groups and individual members.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <i data-lucide="bar-chart" class="icon"></i>
+            <div>
+                <h2>AI Trust Scores</h2>
+                <p>Analyze AI-calculated trust ratings for members and groups.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <i data-lucide="file-text" class="icon"></i>
+            <div>
+                <h2>Payout Reports</h2>
+                <p>Check completed and pending payouts, including flagged issues.</p>
+            </div>
+        </div>
+
+    </section>
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+});
+</script>
+</body>
+</html>

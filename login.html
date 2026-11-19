@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BothoTech - Login / Sign Up</title>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+  <!-- LOGIN / SIGNUP CARD -->
+  <div class="form-card">
+    <h2>Login</h2>
+    <form>
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="you@example.com" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="********" required>
+
+      <button type="submit" class="btn btn-login">Login</button>
+    </form>
+    <div class="form-footer">
+      Don't have an account? <a href="#" id="showSignup">Sign Up</a>
+    </div>
+  </div>
+
+  <!-- SIGNUP CARD (hidden by default) -->
+  <div class="form-card" id="signupCard" style="display:none; margin-left: 1rem;">
+    <h2>Sign Up</h2>
+    <form>
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="Your Name" required>
+
+      <label for="email-signup">Email</label>
+      <input type="email" id="email-signup" placeholder="you@example.com" required>
+
+      <label for="password-signup">Password</label>
+      <input type="password" id="password-signup" placeholder="********" required>
+
+      <label for="confirm-password">Confirm Password</label>
+      <input type="password" id="confirm-password" placeholder="********" required>
+
+      <button type="submit" class="btn btn-signup">Sign Up</button>
+    </form>
+    <div class="form-footer">
+      Already have an account? <a href="#" id="showLogin">Login</a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('showSignup').addEventListener('click', e => {
+      e.preventDefault();
+      document.querySelector('.form-card').style.display = 'none';
+      document.getElementById('signupCard').style.display = 'block';
+    });
+    document.getElementById('showLogin').addEventListener('click', e => {
+      e.preventDefault();
+      document.getElementById('signupCard').style.display = 'none';
+      document.querySelector('.form-card').style.display = 'block';
+    });
+
+    // Lucide icons (optional, just for decoration if needed)
+    if(typeof lucide !== 'undefined'){ lucide.createIcons(); }
+  </script>
+</body>
+</html>

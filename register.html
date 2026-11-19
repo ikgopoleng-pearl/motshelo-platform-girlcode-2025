@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BothoTech - Motshelo Actions</title>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+
+<!-- Header / Navigation -->
+<header class="header">
+    <div class="logo">BothoTech</div>
+    <nav class="nav-links">
+        <a href="#" class="nav-link">Dashboard</a>
+        <a href="#" class="nav-link">Groups</a>
+        <a href="#" class="nav-link">Reports</a>
+        <a href="#" class="nav-link">AI Score</a>
+        <a href="#" class="nav-link">Motshelo Actions</a> <!-- Current Page -->
+    </nav>
+</header>
+
+<!-- Main Cards -->
+<div class="container">
+    <!-- Create Motshelo Card -->
+    <div class="card">
+        <h2>Create a Motshelo</h2>
+        <p>Start a new savings group with your friends or community. Manage contributions and track trust scores easily.</p>
+        <button class="btn btn-create">Create Motshelo</button>
+    </div>
+
+    <!-- Join Motshelo Card -->
+    <div class="card">
+        <h2>Join a Motshelo</h2>
+        <p>Enter a valid Motshelo code to join an existing group and start contributing right away.</p>
+        <input type="text" placeholder="Enter Motshelo Code">
+        <button class="btn btn-join">Join Motshelo</button>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', ()=>{
+    if(typeof lucide !== 'undefined'){ lucide.createIcons(); }
+});
+</script>
+</body>
+</html>

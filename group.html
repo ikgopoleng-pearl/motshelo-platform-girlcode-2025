@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BothoTech - My Groups</title>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link rel="stylesheet" href="css/group.css">
+</head>
+<body>
+
+<header>
+    <div class="logo"><i data-lucide="gem"></i> BothoTech</div>
+    <nav>
+        <a href="index.html\">Home</a>
+        <a href="dashboard.html">MY Dashboard</a>
+        <a href="group.html" class="active">Groups</a>
+        <a href="reports,html">Reports</a>
+        <a href="ai-score.html"> AI score</a>
+    </nav>
+    <div class="profile-badge">L</div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <h1>Your Motshelo Groups</h1>
+    <p>Manage your Motshelo memberships, track contributions, and collaborate securely with trusted members.</p>
+</section>
+
+<!-- Groups Section -->
+<section class="groups-section">
+    <h2 class="section-title">Active Groups</h2>
+
+    <div class="groups-grid">
+        <div class="group-card gold">
+            <h3>Bophelo Motshelo</h3>
+            <p><strong>Members:</strong> 12</p>
+            <p><strong>Total Savings:</strong> R45,500</p>
+            <p><strong>Next Payout:</strong> Oct 25, 2025</p>
+            <button class="view-btn">View Details</button>
+        </div>
+
+        <div class="group-card violet">
+            <h3>Ditsala Savings</h3>
+            <p><strong>Members:</strong> 8</p>
+            <p><strong>Total Savings:</strong> R30,000</p>
+            <p><strong>Next Payout:</strong> Nov 10, 2025</p>
+            <button class="view-btn">View Details</button>
+        </div>
+
+        <div class="group-card coral">
+            <h3>Motho Ke Motho</h3>
+            <p><strong>Members:</strong> 10</p>
+            <p><strong>Total Savings:</strong> R22,700</p>
+            <p><strong>Next Payout:</strong> Nov 30, 2025</p>
+            <button class="view-btn">View Details</button>
+        </div>
+    </div>
+
+    <!-- Join / Create Section -->
+    <div class="actions">
+        <h2>Start or Join a Motshelo</h2>
+        <div class="action-buttons">
+            <a href="create-group.html">
+                <button><i data-lucide="plus-circle"></i> Create New Group</button>
+            </a>
+            <a href="join-existing-groups.html">
+            <button><i data-lucide="users"></i> Join Existing Group</button>
+            </a>
+        </div>
+    </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    lucide.createIcons();
+});
+</script>
+
+</body>
+</html>
