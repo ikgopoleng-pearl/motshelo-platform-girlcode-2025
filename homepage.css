@@ -1,0 +1,108 @@
+:root {
+        --midnight-green: #023E40;
+        --light-green: #A2CDB0;
+        --gold-dust: #F5B800;
+        --sapphire-violet: #6A1B9A;
+        --electric-coral: #FF4E50;
+        --ivory-clay: #F9F7F2;
+        --graphite-black: #212121;
+    }
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body {
+        font-family: 'Inter', sans-serif;
+        background-color: var(--midnight-green);
+        color: var(--graphite-black);
+    }
+
+    /* Navbar */
+    .header {
+            background-color: var(--midnight-green);
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--gold-dust); }
+        .nav-links { display: flex; gap: 1.5rem; }
+        .nav-link { color: var(--ivory-clay); text-decoration: none; font-weight: 500; transition: color 150ms; padding: 5px;margin-right: 90px; border: 2px solid rgb(39, 70, 39);}
+        .nav-link:hover { color: var(--gold-dust); }
+        .profile-badge { width: 2rem; height: 2rem; border-radius: 9999px; background-color: var(--sapphire-violet); display:flex; align-items:center; justify-content:center; color:white; font-weight:600; border:2px solid var(--gold-dust); }
+
+    /* Hero Section */
+.hero {
+    width: 100%;
+    min-height: 80vh; /* Make it taller, adjusts with viewport */
+    margin: 0; /* Remove top margin so it touches navbar */
+    padding: 0; /* Optional: remove internal spacing */
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertically center content */
+    align-items: center;
+
+    /* Background image with black overlay */
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('images/homepage.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+    .hero h1 {
+        font-size: 3rem; font-weight: 800; margin-bottom: 1rem;
+    }
+    .hero p {
+        font-size: 1.25rem; margin-bottom: 2rem;
+        color: var(--light-green);
+    }
+    .hero-button {
+        background-color: var(--electric-coral);
+        color: white;
+        font-weight: 700;
+        padding: 0.75rem 2rem;
+        border-radius: 0.5rem;
+        border: none;
+        cursor: pointer;
+        margin: 0 0.5rem;
+        transition: transform 0.2s, opacity 0.2s;
+    }
+    .hero-button:hover { transform: scale(1.05); opacity: 0.9; }
+
+    /* Features Section */
+    .features {
+        max-width: 1200px;
+        margin: 4rem auto;
+        display: grid;
+        gap: 2rem;
+        text-align: center;
+    }
+    @media(min-width:768px){ .features{grid-template-columns: repeat(2,1fr);} }
+    @media(min-width:1024px){ .features{grid-template-columns: repeat(4,1fr);} }
+    .feature-card {
+        background-color: var(--light-green);
+        color: var(--midnight-green);
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        transition: transform 0.3s;
+        cursor: default;
+    }
+    .feature-card:hover { transform: scale(1.05); }
+    .feature-card i { width: 2rem; height: 2rem; margin-bottom: 1rem; }
+    .feature-card h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .feature-card p { font-size: 0.875rem; }
+
+    /* Footer */
+    footer {
+        text-align: center;
+        padding: 2rem 1rem;
+        color: white;
+        font-size: 0.875rem;
+        border-top: 1px solid var(--gold-dust);
+        margin-top: 4rem;
+    }

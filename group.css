@@ -1,0 +1,196 @@
+:root {
+        --midnight-green: #023E40;
+        --card-green: #065353;
+        --gold-dust: #F5B800;
+        --sapphire-violet: #6A1B9A;
+        --electric-coral: #FF4E50;
+        --ivory-clay: #F9F7F2;
+        --soft-steel: #90A4AE;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+        font-family: 'Inter', sans-serif;
+        background-color: var(--midnight-green);
+        color: var(--ivory-clay);
+        min-height: 100vh;
+    }
+
+    /* --- Navigation --- */
+    header {
+        background-color: var(--midnight-green);
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--gold-dust);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    nav { display: flex; gap: 1.5rem; }
+    nav a {
+        color: var(--ivory-clay);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+    nav a:hover { color: var(--gold-dust); }
+
+    .profile-badge {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 9999px;
+        background-color: var(--sapphire-violet);
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        color:white;
+        font-weight:600;
+        border:2px solid var(--gold-dust);
+    }
+
+    /* --- Hero --- */
+    .hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('images/groups-bg.jpg') no-repeat center center/cover;
+        background-attachment: fixed;
+        text-align: center;
+        padding: 6rem 2rem;
+        color: white;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 0.5rem;
+        color: var(--gold-dust);
+    }
+
+    .hero p {
+        font-size: 1.125rem;
+        opacity: 0.9;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    /* --- Groups Section --- */
+    .groups-section {
+        max-width: 1200px;
+        margin: 3rem auto;
+        padding: 0 2rem;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: var(--gold-dust);
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .groups-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .group-card {
+        background-color: var(--card-green);
+        padding: 1.5rem;
+        border-radius: 1rem;
+        box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        transition: transform 0.3s;
+        position: relative;
+    }
+
+    .group-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 6px;
+        width: 100%;
+        border-radius: 1rem 1rem 0 0;
+        background: var(--gold-dust);
+    }
+
+    .group-card.violet::before { background: var(--sapphire-violet); }
+    .group-card.coral::before { background: var(--electric-coral); }
+
+    .group-card:hover { transform: scale(1.02); }
+
+    .group-card h3 {
+        font-size: 1.25rem;
+        margin-top: 0.75rem;
+        margin-bottom: 0.5rem;
+        color: var(--ivory-clay);
+    }
+
+    .group-card p {
+        font-size: 0.95rem;
+        color: var(--soft-steel);
+        margin-bottom: 0.25rem;
+    }
+
+    .view-btn {
+        margin-top: 1rem;
+        background-color: var(--gold-dust);
+        color: var(--midnight-green);
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .view-btn:hover {
+        background-color: #ffcc00;
+        transform: scale(1.05);
+    }
+
+    /* --- Join/Create Section --- */
+    .actions {
+        text-align: center;
+        margin-top: 3rem;
+    }
+
+    .actions h2 {
+        color: var(--gold-dust);
+        margin-bottom: 1rem;
+    }
+
+    .action-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .action-buttons button {
+        background-color: var(--sapphire-violet);
+        color: var(--ivory-clay);
+        border: none;
+        padding: 0.75rem 1.25rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .action-buttons button:hover {
+        background-color: var(--electric-coral);
+        transform: scale(1.05);
+    }

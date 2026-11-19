@@ -1,0 +1,149 @@
+:root {
+  --midnight-green: #023E40;
+  --card-green: #065353;
+  --gold-dust: #F5B800;
+  --electric-coral: #FF4E50;
+  --ivory-clay: #F9F7F2;
+  --soft-steel: #90A4AE;
+  --crimson-red: #C62828;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--midnight-green);
+  color: var(--ivory-clay);
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--midnight-green);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  position: sticky; top: 0; z-index: 10;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--gold-dust);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--ivory-clay);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--gold-dust);
+}
+
+.profile-badge {
+  background: var(--electric-coral);
+  color: white;
+  border-radius: 50%;
+  width: 2rem; height: 2rem;
+  display: flex; justify-content: center; align-items: center;
+  font-weight: bold;
+}
+
+/* --- FORM SECTION --- */
+.container {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2rem;
+}
+
+.form-section {
+  background-color: var(--card-green);
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.form-section h1 {
+  font-size: 2rem;
+  color: var(--gold-dust);
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: var(--soft-steel);
+  margin-bottom: 2rem;
+}
+
+.group-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+label {
+  font-weight: 600;
+}
+
+input, textarea, select {
+  background-color: var(--midnight-green);
+  border: 2px solid var(--soft-steel);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  color: var(--ivory-clay);
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--gold-dust);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.create-btn, .cancel-btn {
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.2s;
+}
+
+.create-btn {
+  background-color: var(--gold-dust);
+  color: var(--midnight-green);
+}
+
+.cancel-btn {
+  background-color: var(--crimson-red);
+  color: white;
+}
+
+.create-btn:hover, .cancel-btn:hover {
+  transform: scale(1.05);
+}
